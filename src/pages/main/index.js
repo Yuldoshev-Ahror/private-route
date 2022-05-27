@@ -34,7 +34,7 @@ const Main = () => {
         if(!products.data)
             return dispatch(fetGetProducts());
         setControllerProducts(products.data.items)
-    }, [products.data]);
+    }, [dispatch, products.data]);
 
     const handleSearch = (searchName) => {
         if(!searchName) return setControllerProducts(products.data.items);
